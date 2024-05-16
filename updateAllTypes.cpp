@@ -207,7 +207,7 @@ void updateLast(node *header, int data){
 void updateAt(node *header, int data, int index){
     node *ptr = header;
     int indexCheck = -1;
-    while(indexCheck < index-1){
+    while(indexCheck < index-1 and ptr->link != NULL){
         indexCheck++;
         ptr = ptr->link;
     }
